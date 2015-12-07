@@ -58,6 +58,7 @@ $(function() {
 
     console.log(scale);
 
+    // This math literally does not work yet
     imageFace.
       css('margin-left', -(face.x)).
       css('margin-top', -(face.y / (scale * 1.5))).
