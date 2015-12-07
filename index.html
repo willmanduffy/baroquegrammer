@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head lang='en'>
+    <meta charset='UTF-8'>
+    <title>Baroquegrammer</title>
+
+    <link rel='stylesheet' type='text/css' href='assets/styles/index.css'  />
+  </head>
+
+  <body>
+    <form>
+      <input type='file' id='image-file-field' name='foo'>
+      <img id='image-preview'></img>
+      <input type='submit' id='image-upload' value='Upload Chill Image'>
+    </form>
+
+    <div id='image-container' class='image-container'>
+      <div class='image-target'>
+        <img id='image-face' class='image-face'>
+      </div>
+
+      <img src='assets/images/main.png' class='main-image'>
+    </div>
+
+    <!-- Include some chill JavaScript dependencies here y'all -->
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='node_modules/jquery.facedetection/dist/jquery.facedetection.min.js'></script>
+
+    <script src='assets/js/index.js'></script>
+  </body>
+</html>
