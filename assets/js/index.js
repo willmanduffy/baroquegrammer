@@ -38,7 +38,7 @@ $(function() {
           placeFace();
           sizeFace(face);
         } else {
-          alert('Your image was bullshit');
+          alert("Yikes! Couldn't find a face in this image. Try another one. Don't worry it's not your fault programming is a nightmare.");
         }
       }
     });
