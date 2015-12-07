@@ -3,6 +3,11 @@
 }
 
 .image-face {
+  transform-origin: top left;
+}
+
+.image-preview {
+  display: none;
 }
 
 .image-target {
