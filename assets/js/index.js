@@ -1,8 +1,20 @@
 $(function() {
+  const PARENT_FACE_X = '157px'; // Distance of face hole from left. Gross.
+  const PARENT_FACE_Y = '76px' // Distance of face hole from top. Gross.
+  const PARENT_FACE_HEIGHT = '186px' // The height of the face hole. Gross.
   const PARENT_FACE_WIDTH = 135; // The width of the face hole. Gross.
 
   var imageFace = $('#image-face'); // The element the face is planted onto
+  var imageTarget = $('#image-target'); // The "face hole". Gross.
   var imagePreview = $('#image-preview');
+
+  $(document).ready(function() {
+    imageTarget.
+      css('left', PARENT_FACE_X).
+      css('top', PARENT_FACE_Y).
+      css('height', PARENT_FACE_HEIGHT).
+      css('width', PARENT_FACE_WIDTH)
+  });
 
   $('#image-file-field').change(function() {
     var data = $(this)[0].files[0];
