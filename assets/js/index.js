@@ -8,6 +8,8 @@ $(function() {
   var imageTarget = $('#image-target'); // The "face hole". Gross.
   var imagePreview = $('#image-preview');
 
+  // Place the image target element on document load from the constants that are
+  // defined above.
   $(document).ready(function() {
     imageTarget.
       css('left', PARENT_FACE_X).
@@ -16,6 +18,7 @@ $(function() {
       css('width', PARENT_FACE_WIDTH)
   });
 
+  // Pulls the face out from the file input
   $('#image-file-field').change(function() {
     var data = $(this)[0].files[0];
 
@@ -34,6 +37,9 @@ $(function() {
     return (PARENT_FACE_WIDTH / face.width);
   }
 
+  // Spits the face out into the document. To be honest I just wanted to use the
+  // word "spits" here and you can't stop me. I won't merge your PR to change
+  // that.
   function placeFace() {
     var imagePath = imagePreview.attr('src');
 
@@ -50,7 +56,10 @@ $(function() {
           placeFace();
           sizeFace(face);
         } else {
-          alert("Yikes! Couldn't find a face in this image. Try another one. Don't worry it's not your fault programming is a nightmare.");
+          alert(
+            "Yikes! Couldn't find a face in this image. Try another one. " +
+            "Don't worry it's not your fault programming is a nightmare."
+          );
         }
       }
     });
