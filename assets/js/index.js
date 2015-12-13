@@ -25,12 +25,6 @@ $(function() {
     showPreview(data);
   });
 
-  $('#image-upload').click(function(event) {
-    event.preventDefault();
-
-    processFace();
-  });
-
   // Return how big the original face is in comparision with the "face hole".
   // Again, gross.
   function findScale(face) {
@@ -79,6 +73,7 @@ $(function() {
 
     reader.onload = function(event) {
       imagePreview.attr('src', event.target.result)
+      processFace();
     }
 
     reader.readAsDataURL(data);
